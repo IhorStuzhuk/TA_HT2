@@ -37,7 +37,7 @@ public class AvicSmokeTests {
         driver.findElement(xpath("//li[@class='has-dropdown']/ul[contains(@class, menu-dropdown__lang)]/li/a")).click();
 
         String actCatalog = driver.findElement(xpath("//span[@class='sidebar-item']")).getAttribute("innerText");
-        assertEquals(actCatalog,"Каталог товарів");
+        assertEquals(actCatalog, "Каталог товарів");
     }
 
     @Test(priority = 2)
@@ -80,8 +80,9 @@ public class AvicSmokeTests {
         assertEquals(totalActPrice, totalExpPrice);
 
     }
+
     @Test(priority = 4)
-    public void checkDeleteProductFromCart(){
+    public void checkDeleteProductFromCart() {
         driver.findElement(xpath("//span[@class='sidebar-item']")).click();
         driver.findElement(xpath("//ul[contains(@class,'sidebar-list')]//a[contains(@href, 'apple-store')]")).click();
         driver.findElement(xpath("//div[@class='brand-box__title']/a[contains(@href,'iphone')]")).click();
